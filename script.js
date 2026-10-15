@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    const body = document.body;
-
+    
+    const body = document.body; 
     body.classList.remove("intro-finished");
 
     const introUrl = `url("./images/intro.gif?reload=${Date.now()}")`;
@@ -10,6 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const loopImage = new Image();
     loopImage.src = "./images/loop.gif";
 
+    
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    const animationPreview = document.getElementById("animation-preview");
+    const replayButton = document.getElementById("replay-animation");
+
+
+    const yearElement = document.getElementById("year");
+    
     setTimeout(function () {
         const switchToLoop = function () {
             body.classList.add("intro-finished");
@@ -29,9 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }, 1600);
 
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
-
     if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", function () {
             const isOpen = navLinks.classList.toggle("active");
@@ -45,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const links = document.querySelectorAll('a[href^="#"]');
 
     links.forEach(function (link) {
         link.addEventListener("click", function (event) {
@@ -77,7 +85,41 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    const yearElement = document.getElementById("year");
+
+    if (animationPreview && replayButton) {
+        let animationTimer;
+        let animationRun = 0;
+
+        // Preload the looping GIF.
+        const loopPreload = new Image();
+        loopPreload.src = "./images/loop.gif";
+
+        function playAnimation() {
+            // Cancel the previous sequence.
+            clearTimeout(animationTimer);
+
+            // Ignore timers from older animation runs.
+            const currentRun = ++animationRun;
+
+            // Restart the intro GIF from its beginning.
+            animationPreview.src =
+                `./images/intro.gif?restart=${Date.now()}`;
+
+            // Switch to the looping GIF after 1.6 seconds.
+            animationTimer = setTimeout(function () {
+                if (currentRun !== animationRun) return;
+
+                animationPreview.src =
+                    `./images/loop.gif?restart=${Date.now()}`;
+            }, 1600);
+        }
+
+        replayButton.addEventListener("click", playAnimation);
+
+        // Play automatically when the page loads.
+        playAnimation();
+    }
+
 
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();

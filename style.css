@@ -412,6 +412,43 @@ section h2,
     font-size: 0.85rem;
 }
 
+.animation-section {
+    text-align: center;
+}
+
+.animation-display {
+    width: 100%;
+    max-width: 700px;
+    height: clamp(180px, 35vw, 360px);
+    margin: 0 auto 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background: rgba(10, 16, 11, 0.7);
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
+}
+
+.animation-display img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+#replay-animation {
+    font: inherit;
+}
+
+#replay-animation:focus-visible {
+    outline: 2px solid var(--highlight-color);
+    outline-offset: 4px;
+}
+
 
 .site-footer {
     padding: clamp(36px, 5vw, 56px) var(--page-gutter) 16px;
