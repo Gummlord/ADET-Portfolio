@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./images/Cog.png">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+
+    
+    <!-- HEADER: Brand and navigation links -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="#home"><img src="images/Cog.png" alt="Cog"/><span>Gummlord</span>.dev</a>
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links"
+                type="button"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Actual body -->
+    <main>
+
+        <!-- HERO: Introduction and logo photo -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">PROGRAMMING PORTFOLIO</p>
+
+                <h1>Hello, I'm <span>Marione</span>.</h1>
+
+                <p class="hero-description">
+                    And sometimes, Gummlord. <br/>
+                    An aspiring game developer and full-stack web developer currently studying at Bulacan State University,
+                     with a penchant for interactive user interfaces.
+
+                </p>
+                <a class="button" href="#projects">My Works</a>
+            </div>
+
+            <div class="logo-container">
+                <img
+                    class="logo-photo"
+                    src="images/cog.gif"
+                    alt="Rotating Cog"
+                >
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section-container" id="about">
+            <p class="eyebrow">WHO I AM</p>
+            <h2>About Me</h2>
+
+            <p>
+                I'm a Bachelor of Science in Information Technology student specializing in Web and Mobile Applications Development <br/>
+                <b>Programming Languages:</b> Java, JavaScript, Python, Dart, GDScript <br/>
+                <b>Runtime & Backend Technologies:</b> Node.js, Express.js <br/>
+                <b>Databases & Data Formats:</b> MySQL, SQLite, JSON, XML, Firebase RTDB, Firebase Firestore, Cloudinary <br/>
+                <b>Frameworks & Libraries:</b> React, Flutter <br/>
+            </p>
+
+            <p>
+                My current interests include HTML, CSS, JavaScript,
+                React, and Firebase. I'm always looking for
+                opportunities to learn and grow as a developer.
+            </p>
+        </section>
+
+        <!-- PROJECTS: Current and ongoing -->
+        <section class="projects section-container" id="projects">
+            <p class="eyebrow">WHAT I'VE BUILT</p>
+            <h2>My Projects</h2>
+            <p class="section-description">
+                Here are a few examples of projects I have worked on
+                or plan to develop.
+            </p>
+
+            <div class="project-grid">
+
+                <article class="project-card">
+                    <div class="project-number">01</div>
+                    <h3>Personal Portfolio</h3>
+                    <p>
+                        A responsive personal website that introduces
+                        me, showcases my work, and provides contact
+                        information.
+                    </p>
+                    <ul class="project-tags">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">02</div>
+                    <h3>Card Trading Game</h3>
+                    <p>
+                        A simple web game concept where players create
+                        cards, manage their collection, and trade
+                        cards using a virtual marketplace.
+                    </p>
+                    <ul class="project-tags">
+                        <li>React</li>
+                        <li>Firebase</li>
+                        <li>Javascript</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <div class="project-number">03</div>
+                    <h3>Educational Dungeon Crawler Game [on-going]</h3>
+                    <p>
+                        A complex desktop application that teaches players the basics of coding
+                        through a dungeon. As the player navigates the dungeon, the more coding practices
+                        they encounter.
+                    </p>
+                    <ul class="project-tags">
+                        <li>GDScript</li>
+                        <li>SQLite</li>
+                        <li>Javascript</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <div class="project-number">04</div>
+                    <h3>Tambayan sa Pulo AI POS and Inventory System [on-going]</h3>
+                    <p>
+                        A responsive web-based system that provides an Artificial Intelligence
+                        as a data analyst of sales and inventory for a family-run restaurant. Also
+                        contains all the basic requirements for a Point of Sales and Inventory System
+                    </p>
+                    <ul class="project-tags">
+                        <li>React</li>
+                        <li>Firebase</li>
+                        <li>Javascript</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <div class="project-number">05</div>
+                    <h3>Mobile Budgetting App [on-going] </h3>
+                    <p>
+                        A simple mobile application that tracks and records both
+                        salaries and expenses. Also features an expense planner and a
+                        savings goal tracker to help users monitor their financial activities.
+                    </p>
+                    <ul class="project-tags">
+                        <li>Flutter</li>
+                        <li>Dart</li>
+                        <li>Firebase</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">06</div>
+                    <h3>Library Management System</h3>
+                    <p>
+                        A simple desktop-based library management system that allows librarians to safekeep
+                        books through a digital platform. Students can borrow, return, reserve, and request books
+                        through the system.
+                    </p>
+                    <ul class="project-tags">
+                        <li>Java</li>
+                        <li>MySQL</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <div class="project-number">07</div>
+                    <h3>Online Course Enrollment System</h3>
+                    <p>
+                        A prototypical web application that showcases intuitive user interface and user experience.
+                        Has a search and filter function for the various tags and attributes of a course. 
+                        An admin account can add, edit, or remove courses from the page.
+                    </p>
+                    <ul class="project-tags">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <div class="project-number">08</div>
+                    <h3>Convenience Store POS and Inventory System with Analytical Dashboard</h3>
+                    <p>
+                        A desktop inventory system that connects to a phone via Bluetooth to scan barcodes and register products for the Point of Sale (POS) system. 
+                        Its dashboard uses heatmaps to track stock levels and highlights products nearing expiration, low in stock, or out of stock. 
+                    </p>
+                    <ul class="project-tags">
+                        <li>Java</li>
+                        <li>MySQL</li>
+                    </ul>
+                </article>
+                    <article class="project-card">
+                    <div class="project-number">09</div>
+                    <h3>File management System</h3>
+                    <p>
+                        A simple file management system that can visualize through grids the contents of the folder,
+                        its dimensions representative of its digital size.
+                    </p>
+                    <ul class="project-tags">
+                        <li>Java</li>
+                    </ul>
+                </article>
+
+
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: Contact details -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-content">
+            <p class="eyebrow">LET'S CONNECT</p>
+            <h2>Contacts</h2>
+            <p>
+                Have a question or want to work together?
+                Feel free to reach out.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:golosindamarione@gmail.com">
+                    Email Me
+                </a>
+
+                <a
+                    href="https://github.com/Gummlord"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+            </div>
+        </div>
+
+        <p class="copyright">
+            All art are done by me. <br/>
+            &copy; <span id="year">2026</span> Gummlord.
+            All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
